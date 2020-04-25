@@ -22,7 +22,7 @@ const Actor = ({ image = './profile-avatar.png', name, birthDate, height, gender
             <ul style={{ paddingLeft: 0 }}>
               {
                 movies.map((m, idx) => (
-                  <li><Link to={`/${m.title}`} key={`movie_${m.title}`}>{m.title}</Link></li>
+                  <li key={`movie_${m.title}`}><Link to={`/${m.title}`} >{m.title}</Link></li>
                 ))
               }
             </ul>
