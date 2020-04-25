@@ -1,13 +1,14 @@
 import React, { useState } from 'react';
 import { Input, Grid, Button } from 'semantic-ui-react';
 
-const Search = ({ onInputChange, placeholder, onSearch }) => {
+const Search = ({ onInputChange, placeholder, onSearch, onContinuousSearch }) => {
   const [loading, setLoading] = useState(false);
   const [searchText, setSearchText] = useState('');
 
   const handleInputChange = e => {
     setSearchText(e.target.value);
     onInputChange && onInputChange(e);
+    onContinuousSearch && onContinuousSearch(e.target.value, setLoading);
   }
 
   const handleSearchClick = () => {

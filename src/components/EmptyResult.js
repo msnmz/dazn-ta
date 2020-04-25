@@ -1,7 +1,7 @@
 import React from 'react';
 import { Grid, Header } from 'semantic-ui-react';
 
-import logo from './movie-icon.svg';
+import logo from '../assets/movie-icon.svg';
 
 const EmptyResult = () => {
   return (
